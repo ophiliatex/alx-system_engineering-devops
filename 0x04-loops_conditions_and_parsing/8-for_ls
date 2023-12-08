@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Bash script that displays content of the current dirc
+
+list="$(ls -1)"
+
+for file in $list; do
+	filename=$(echo "$file" | cut -d '-' -f2-)
+	echo "$filename"
+done
